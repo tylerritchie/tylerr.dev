@@ -3,7 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"
+  >
   <title>Hello <%= "world" %>!</title>
+<style>
+  @media (min-width: 768px) {
+    body > header,
+    body > main,
+    body > footer {
+      max-width: 700px;
+    }
+  }
+
+  html {
+    height: 100%;
+  }
+
+  body {
+    text-align: center;
+    background: linear-gradient(to bottom right, #20202F, #000000);
+    background-attachment: fixed;
+  }
+
+  ul.main {
+    padding: 0;
+
+    & li {
+      list-style: none;
+
+      & button {
+        width: 100%;
+      }
+    }
+  }
+</style>
 </head>
 <body>
 
@@ -15,7 +50,7 @@
 
   <main>
     <h2>Hello world!</h2>
-    <ul>
+    <ul class="main">
       <li><button>Hello world!</button></li>
       <li><button>Hello world!</button></li>
       <li><button>Hello world!</button></li>
